@@ -1,30 +1,68 @@
-# CaptureErrorResponse_BurpSuite
+# 🚨 burp-api-failure-monitor
+A Burp Suite extension to capture API failure responses (4xx/5xx) during application flows and send real-time alerts to Slack.
 
-## Description
-1. errorResponseExtension.py records the response in a .txt file whenever there is an api failure
-2. sendToSlack.sh when executed will post the data from the .txt file to a slack channel
+# 📌 Overview
+```burp-api-failure-monitor``` is a lightweight **Burp Suite extension** built to automatically capture **backend API failures while executing mobile or web application flows**.
 
-During the execution of the Automation Test Suite, BurpSuite monitors all API calls being made.
-Failures can sometimes occur due to backend (BE) issues, leading to API errors that cause the scripts to fail.
-By recording error responses in the .txt file, this setup aids in identifying the root cause of API failures, streamlining debugging and issue resolution.
+Whenever an API returns a failure response (4xx or 5xx), the extension:
 
-## Requirement
-* BurpSuite Extension
-* jython-standalone-2.7.3.jar
-* Python 3.9.6
+- Logs the response to a .txt file
+- Sends the error details to a configured Slack channel
 
-## Setup Instructions
-1. Install BurpSuite
-2. Configure the device with Burp to listen to network logs >> Import Burp certificate and install the CA certificate in the device
+This enables **faster debugging, better visibility, and real-time alerts** during test execution.
 
-<img width="1120" alt="Screenshot 2024-01-11 at 7 16 48 PM" src="https://github.com/user-attachments/assets/8788581f-01f5-4674-b976-b221d61081b2" />
+# 🎯 Key Features
 
-3. Download the jython-standalone-2.7.3.jar
-4. Set the path
+- Captures API failure responses automatically
+- Supports HTTP status codes 400–599
+- Logs failed responses to a text file
+- Sends alerts to Slack for instant visibility
+- Works seamlessly with mobile apps via emulator/device proxying
+- Ideal for exploratory testing and automation-assisted monitoring
 
-<img width="1120" alt="246cbbdf-65cf-4863-9172-495a25f8ba9b" src="https://github.com/user-attachments/assets/178b59a8-1d14-4f46-a36b-95f1fb25c9cb" />
+# 🔧 Prerequisites
 
-5. Download and Install latest Python 
-6. Validate on terminal >> python3 --version
+- Burp Suite installed
+- Jython configured in Burp (for Python extensions)
+- Android emulator or physical device
+- Slack Incoming Webhook URL
+
+# 🚀 Setup & Usage
+1️⃣ Install the Burp Extension
+- Open Burp Suite → Extensions
+- Add errorResponseExtension.py as a Python (Jython) extension
+- Ensure the extension loads successfully without errors
+
+2️⃣ Configure Proxy
+- Configure the Android emulator or device to route traffic through Burp Proxy
+- Confirm API calls are visible under Proxy → HTTP history
+
+3️⃣ Execute Application Flow
+- Launch the application
+- Perform any user flow that triggers API requests
+
+4️⃣ API Failure Detection Logic >> Any API response with the following status codes is treated as a failure:  
+- ```400 <= status_code <= 599```
+
+5️⃣ Logging & Slack Notification >> The failed API response is:
+- Stored in a .txt file
+- Automatically sent to the configured Slack channel
+
+# 💡 Optional Enhancement
+This extension can be used alongside **Appium automation** to capture backend API failures during **automated mobile test execution**.
+
+
+# 🎥 Demo (Execution Flow)
+
+A demo video showcasing the extension execution is available.
+All API endpoints and response payloads are masked to ensure security and confidentiality.
+
+https://github.com/user-attachments/assets/ce46aa6a-ab93-45d9-aaf7-19c145c53133
+
+
+
+Below is the screenshot of Failed response sent to Slack channel
+
+<img width="3010" height="1748" alt="failedResponse_sent_to_slack" src="https://github.com/user-attachments/assets/4e40781b-1626-47ce-b0af-02fb841af42b" />
 
 
