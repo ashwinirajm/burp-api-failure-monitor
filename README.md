@@ -66,3 +66,18 @@ Below is the screenshot of Failed response sent to Slack channel
 <img width="3010" height="1748" alt="failedResponse_sent_to_slack" src="https://github.com/user-attachments/assets/4e40781b-1626-47ce-b0af-02fb841af42b" />
 
 
+**Sample Slack output**
+```
+Error Response from: /api/v1/users
+Status Code: 500
+Response:
+HTTP/2 500 Internal Server Error
+Request Body Params
+<masked>
+Response Body
+<masked>
+```
+
+
+
+
