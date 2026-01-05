@@ -6,19 +6,17 @@ A Burp Suite extension to capture API failure responses (4xx/5xx) during applica
 
 Whenever an API returns a failure response (4xx or 5xx), the extension:
 
-- Logs the response to a .txt file
-- Sends the error details to a configured Slack channel
+- Logs the failed response to a .txt file
+- Sends the same failed response to a configured Slack channel
 
 This enables **faster debugging, better visibility, and real-time alerts** during test execution.
 
 # 🎯 Key Features
 
-- Captures API failure responses automatically
-- Supports HTTP status codes 400–599
-- Logs failed responses to a text file
-- Sends alerts to Slack for instant visibility
-- Works seamlessly with mobile apps via emulator/device proxying
-- Ideal for exploratory testing and automation-assisted monitoring
+- Detects 4xx & 5xx API responses
+- Sends real-time Slack alerts
+- Useful during manual, exploratory & integration testing
+- Lightweight and easy to plug into Burp Proxy
 
 # 🔧 Prerequisites
 
