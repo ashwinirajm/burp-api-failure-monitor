@@ -59,13 +59,6 @@ All API endpoints and response payloads are masked to ensure security and confid
 
 https://github.com/user-attachments/assets/ce46aa6a-ab93-45d9-aaf7-19c145c53133
 
-
-
-Below is the screenshot of Failed response sent to Slack channel
-
-<img width="3010" height="1748" alt="failedResponse_sent_to_slack" src="https://github.com/user-attachments/assets/4e40781b-1626-47ce-b0af-02fb841af42b" />
-
-
 **Sample Slack output**
 ```
 Error Response from: /api/v1/users
@@ -77,6 +70,13 @@ Request Body Params
 Response Body
 <masked>
 ```
+
+
+**Below is the screenshot of Failed response sent to Slack channel**
+
+<img width="3010" height="1748" alt="failedResponse_sent_to_slack" src="https://github.com/user-attachments/assets/4e40781b-1626-47ce-b0af-02fb841af42b" />
+
+
 
 
 
