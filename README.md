@@ -1,7 +1,7 @@
 # 🚨 burp-api-failure-monitor
 A Burp Suite extension to capture API failure responses (4xx/5xx) during application flows and send real-time alerts to Slack.
 
-# 📌 Overview
+## 📌 Overview
 ```burp-api-failure-monitor``` is a lightweight **Burp Suite extension** built to automatically capture **backend API failures while executing mobile or web application flows**.
 
 Whenever an API returns a failure response (4xx or 5xx), the extension:
@@ -11,21 +11,21 @@ Whenever an API returns a failure response (4xx or 5xx), the extension:
 
 This enables **faster debugging, better visibility, and real-time alerts** during test execution.
 
-# 🎯 Key Features
+## 🎯 Key Features
 
 - Detects 4xx & 5xx API responses
 - Sends real-time Slack alerts
 - Useful during manual, exploratory & integration testing
 - Lightweight and easy to plug into Burp Proxy
 
-# 🔧 Prerequisites
+## 🔧 Prerequisites
 
 - Burp Suite installed
 - Jython configured in Burp (for Python extensions)
 - Android emulator or physical device
 - Slack Incoming Webhook URL
 
-# 🚀 Setup & Usage
+## 🚀 Setup & Usage
 1️⃣ Install the Burp Extension
 - Open Burp Suite → Extensions
 - Add errorResponseExtension.py as a Python (Jython) extension
@@ -46,11 +46,11 @@ This enables **faster debugging, better visibility, and real-time alerts** durin
 - Stored in a .txt file
 - Automatically sent to the configured Slack channel
 
-# 💡 Optional Enhancement
+## 💡 Optional Enhancement
 This extension can be used alongside **Appium automation** to capture backend API failures during **automated mobile test execution**.
 
 
-# 🎥 Demo (Execution Flow)
+## 🎥 Demo (Execution Flow)
 
 A demo video showcasing the extension execution is available.
 All API endpoints and response payloads are masked to ensure security and confidentiality.
